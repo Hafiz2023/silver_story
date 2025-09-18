@@ -12,7 +12,7 @@ interface Founder {
 // Data for the founders
 const founders: Founder[] = [
   { id: "1", name: "Piya Singh", imageUrl: "/piya.png" },
-  { id: "2", name: "Shahrose Javaid", imageUrl: "/Shahrose javaid.png" },
+  { id: "2", name: "Adil Ameen", imageUrl: "/adil.jpg" },
 ];
 
 export default function CreativeFounders() {

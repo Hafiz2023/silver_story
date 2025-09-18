@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 
 export default function ContactPage() {
@@ -19,7 +20,6 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     try {
       await fetch("/api/sendMail", {
         method: "POST",
@@ -40,19 +40,19 @@ export default function ContactPage() {
   return (
     <div className="w-full">
       {/* Consultation Form Section */}
-      <div className="w-full h-screen flex flex-col items-center justify-center bg-gray-100 px-4">
-        <h1 className="text-4xl font-bold mb-2">Book your free Consultation</h1>
-        <p className="text-gray-600 mb-6">It’s time to live your dreams!</p>
+      <div className="w-full min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4 py-12">
+        <h1 className="text-4xl font-bold mb-2 text-center">Book your Free Consultation</h1>
+        <p className="text-gray-600 mb-6 text-center">It’s time to live your dreams!</p>
 
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-2xl bg-white p-6 rounded-2xl shadow-lg space-y-4"
+          className="w-full max-w-2xl bg-white p-6 md:p-8 rounded-2xl shadow-lg space-y-6"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
               name="name"
-              placeholder="First name"
+              placeholder="First Name"
               className="border p-3 rounded-lg w-full"
               onChange={handleChange}
               required
@@ -78,9 +78,7 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium mb-1">
-                Project Type
-              </label>
+              <label className="block text-sm font-medium mb-1">Project Type</label>
               <div className="flex gap-4">
                 <label>
                   <input
@@ -113,17 +111,19 @@ export default function ContactPage() {
             />
           </div>
 
-          <button
-            type="submit"
-            className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition cursor-pointer"
-          >
-            Submit
-          </button>
+          {/* Centered Submit Button */}
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition cursor-pointer text-lg w-full sm:w-auto"
+            >
+              Submit
+            </button>
+          </div>
 
-          {/* ✅ Address Text Added Under Submit */}
+          {/* Address Text Under Submit */}
           <p className="text-gray-700 text-center max-w-2xl mt-4 italic">
-            Premises 117, Pragati Maidan, Sector A, Metropolitan Co-Operative
-            Housing Society Limited, P.S, Tangra, Kolkata, West Bengal 700105
+            Premises 117, Pragati Maidan, Sector A, Metropolitan Co-Operative Housing Society Limited, P.S, Tangra, Kolkata, West Bengal 700105
           </p>
         </form>
       </div>
@@ -132,9 +132,7 @@ export default function ContactPage() {
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <h2 className="text-2xl font-semibold">
-              Data Submitted Successfully 🎉
-            </h2>
+            <h2 className="text-2xl font-semibold">Data Submitted Successfully 🎉</h2>
             <p className="text-gray-600 mt-2">Your request has been sent!</p>
           </div>
         </div>
