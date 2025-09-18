@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
-import Link from "next/link";
-import { Facebook, Linkedin, Youtube, Instagram } from "lucide-react";
+
+
 import { useState, useEffect } from "react";
 
 export default function HomePage() {
@@ -75,40 +75,7 @@ export default function HomePage() {
         </motion.h1>
       </div>
 
-      {/* Bottom Section */}
-      <div className="absolute bottom-6 left-0 right-0 flex items-center justify-center gap-8 z-10">
-        <Link href="/menu">
-          <Button variant="outline" size="lg" className="rounded-full px-6 transition transform hover:scale-110 hover:shadow-lg cursor-pointer">
-            Menu
-          </Button>
-        </Link>
-
-        <div className="flex items-center gap-6 text-white">
-          <Link href="https://facebook.com" target="_blank">
-            <Facebook className="w-6 h-6 hover:text-blue-500 transition transform hover:scale-125 cursor-pointer" />
-          </Link>
-          <Link href="https://linkedin.com" target="_blank">
-            <Linkedin className="w-6 h-6 hover:text-blue-400 transition transform hover:scale-125 cursor-pointer" />
-          </Link>
-
-          <Button size="lg" className="rounded-2xl text-lg px-8 py-6 transition transform hover:scale-110 hover:shadow-lg cursor-pointer">
-            Get Free Estimate
-          </Button>
-
-          <Link href="https://youtube.com" target="_blank">
-            <Youtube className="w-6 h-6 hover:text-red-500 transition transform hover:scale-125 cursor-pointer" />
-          </Link>
-          <Link href="https://instagram.com" target="_blank">
-            <Instagram className="w-6 h-6 hover:text-pink-500 transition transform hover:scale-125 cursor-pointer" />
-          </Link>
-        </div>
-
-        <Link href="/contact">
-          <Button variant="default" size="lg" className="rounded-full px-6 transition transform hover:scale-110 hover:shadow-lg cursor-pointer">
-            Contact
-          </Button>
-        </Link>
-      </div>
+  
     </div>
   );
 }

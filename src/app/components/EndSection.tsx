@@ -1,9 +1,11 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function EndSection() {
-  const YOUTUBE_VIDEO_ID = "OvsjaGesjU8"; // Video ID only
+  const YOUTUBE_VIDEO_ID = "OvsjaGesjU8";
 
   const buttons = [
     { text: "+92339 4078880", type: "call" },
@@ -48,6 +50,20 @@ export default function EndSection() {
           ))}
         </div>
       </div>
+
+      {/* WhatsApp Floating Icon - Animated & Hover Effect */}
+      <Link
+        href="https://wa.me/923204338215"
+        target="_blank"
+        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg animate-bounce hover:scale-110 hover:shadow-2xl hover:bg-green-600 transition-all duration-300"
+      >
+        <Image
+          src="/whatsapp-svgrepo-com.svg" // place in /public
+          alt="WhatsApp"
+          width={32}
+          height={32}
+        />
+      </Link>
     </section>
   );
 }
