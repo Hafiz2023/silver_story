@@ -1,22 +1,25 @@
-import AllUnderOneRoof from "./components/AllUnderOneRoof";
-import ConsultationAndBrands from "./components/ConsultationAndBrands";
-import ConsultationPage from "./components/ConsultationPage";
-import ContactPage from "./components/ContactPage";
-import CreativeFounders from "./components/CreativeFounders";
-import EndSection from "./components/EndSection";
-import HappyCustomers from "./components/HappyCustomers";
-import HomePage from "./components/HomePage";
-import ImageCarousel from "./components/ImageCarousel";
-import StatsSection from "./components/StatsSection";
-import VideoGallery from "./components/VideoGallery";
-import WarrantySection from "./components/WarrantySection";
+import AllUnderOneRoof from "@/components/sections/AllUnderOneRoof";
+import ConsultationAndBrands from "@/components/sections/ConsultationAndBrands";
+import ConsultationSection from "@/components/sections/ConsultationSection";
+import ContactPage from "@/components/sections/ContactPage";
+import CreativeFounders from "@/components/sections/CreativeFounders";
+import EndSection from "@/components/sections/EndSection";
+import HappyCustomers from "@/components/sections/HappyCustomers";
+import HeroSection from "@/components/sections/HeroSection";
+import ImageCarousel from "@/components/sections/ImageCarousel";
+import StatsSection from "@/components/sections/StatsSection";
+import VideoGallery from "@/components/sections/VideoGallery";
+import WarrantySection from "@/components/sections/WarrantySection";
 
 export default function Home() {
+  // This is the main landing page (Home).
+  // It composes various functional sections (Hero, Contact, Consultation, etc.)
+  // to create a comprehensive single-page-like experience, while still navigating to other pages via Navbar.
   return (
     <div>
-      <HomePage />
+      <HeroSection />
       <ContactPage />
-      <ConsultationPage />
+      <ConsultationSection />
       <ImageCarousel />
       <StatsSection />
       <WarrantySection />

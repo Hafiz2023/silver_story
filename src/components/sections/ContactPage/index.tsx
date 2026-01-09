@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { BackgroundVideo } from "@/components/ui/background-video";
 import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
@@ -11,18 +12,7 @@ export default function ContactPage() {
     <div className="w-full min-h-screen flex flex-col">
       {/* YouTube Video Hero Section */}
       <div className="relative w-full h-screen overflow-hidden">
-        <iframe
-          className="absolute top-1/2 left-1/2 w-[300vw] h-[300vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
-          src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&modestbranding=1&rel=0&showinfo=0`}
-          title="Background Video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          aria-hidden="true"
-        ></iframe>
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <BackgroundVideo videoId={YOUTUBE_VIDEO_ID} />
 
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">

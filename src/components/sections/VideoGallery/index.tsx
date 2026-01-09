@@ -22,31 +22,31 @@ const videos: VideoItem[] = [
   {
     id: "1",
     title: "Luxury Kitchen Project",
-    thumbnailUrl: "/tab/kitchen.png",
+    thumbnailUrl: "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=2768&auto=format&fit=crop",
     youtubeVideoId: "dQw4w9WgXcQ", // Replace with real video ID
   },
   {
     id: "2",
     title: "Modern Bathroom Design",
-    thumbnailUrl: "/tab/image2.png",
+    thumbnailUrl: "https://images.unsplash.com/photo-1552321901-443b740521e1?q=80&w=2670&auto=format&fit=crop",
     youtubeVideoId: "abc123xyz",
   },
   {
     id: "3",
     title: "Elegant Living Room Setup",
-    thumbnailUrl: "/tab/image3.png",
+    thumbnailUrl: "https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?q=80&w=2942&auto=format&fit=crop",
     youtubeVideoId: "def456uvw",
   },
   {
     id: "4",
     title: "Office Interior Inspiration",
-    thumbnailUrl: "/tab/office.png",
+    thumbnailUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2938&auto=format&fit=crop",
     youtubeVideoId: "ghi789rst",
   },
   {
     id: "5",
     title: "Smart Bedroom Concept",
-    thumbnailUrl: "/tab/bedroom.png",
+    thumbnailUrl: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=3264&auto=format&fit=crop",
     youtubeVideoId: "jkl321mno",
   },
 ];

@@ -9,6 +9,7 @@ import {
   Sofa,
   Factory,
 } from "lucide-react"; // lucide-react icons
+import { Card, CardContent } from "@/components/ui/card";
 
 // Define a type for your service items
 interface ServiceItem {
@@ -39,15 +40,17 @@ export default function AllUnderOneRoof() {
         {/* Services Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12">
           {services.map((service) => (
-            <div
+            <Card
               key={service.id}
-              className="group flex flex-col items-center justify-center p-6 rounded-xl bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="group border-none shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              {service.icon}
-              <p className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
-                {service.label}
-              </p>
-            </div>
+              <CardContent className="flex flex-col items-center justify-center p-6 h-full">
+                {service.icon}
+                <p className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
+                  {service.label}
+                </p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
