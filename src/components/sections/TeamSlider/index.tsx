@@ -8,6 +8,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Typography } from "@/components/ui/typography";
 
 // Define a type for founder/team data
 interface TeamMember {
@@ -56,12 +57,12 @@ export default function TeamSlider() {
         <section className="bg-white py-16 md:py-24">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 tracking-tight">
+                    <Typography variant="h2" className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 tracking-tight border-none">
                         Meet The Visionaries
-                    </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+                    </Typography>
+                    <Typography variant="p" className="text-gray-600 max-w-2xl mx-auto text-lg mt-0">
                         The creative minds behind Silver Storey who turn your dreams into reality.
-                    </p>
+                    </Typography>
                 </div>
 
                 <Swiper
@@ -91,11 +92,11 @@ export default function TeamSlider() {
                                     />
                                 </div>
                                 {/* Info */}
-                                <h3 className="text-2xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                                <p className="text-primary font-medium mb-3">{member.role}</p>
-                                <p className="text-gray-600 text-center text-sm leading-relaxed">
+                                <Typography variant="h3" className="text-2xl font-bold text-gray-900 mb-1">{member.name}</Typography>
+                                <Typography variant="p" className="text-primary font-medium mb-3 mt-0">{member.role}</Typography>
+                                <Typography variant="p" className="text-gray-600 text-center text-sm leading-relaxed mt-0">
                                     {member.bio || "Passionate about creating stunning living spaces."}
-                                </p>
+                                </Typography>
                             </div>
                         </SwiperSlide>
                     ))}

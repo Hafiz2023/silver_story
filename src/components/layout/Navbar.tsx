@@ -70,7 +70,7 @@ export function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <Button variant="outline" className="ml-4 rounded-full border-white text-white hover:bg-white hover:text-black transition-colors" asChild>
+                    <Button variant="outline" className="ml-4 rounded-full bg-black text-white hover:bg-white hover:text-black transition-colors" asChild>
                         <Link href="/contact">Book Consultation</Link>
                     </Button>
                 </nav>

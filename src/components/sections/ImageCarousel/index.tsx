@@ -5,8 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
+import { Typography } from "@/components/ui/typography";
 
 interface CategoryItem {
   id: string;
@@ -37,13 +39,13 @@ const categories: CategoryItem[] = [
   {
     id: "4",
     name: "Office",
-    imageUrl: "/tab/office.png",
+    imageUrl: "/tab/Office.png",
     priceRange: "2 L Onwards",
   },
   {
     id: "5",
     name: "Bedroom",
-    imageUrl: "/tab/image4.png",
+    imageUrl: "/tab/Bedroom.png",
     priceRange: "2.2 L Onwards",
   },
 ];
@@ -51,9 +53,9 @@ const categories: CategoryItem[] = [
 export default function HomePage() {
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-8 text-center">
+      <Typography variant="h1" className="text-3xl font-bold mb-8 text-center border-none">
         Explore Our Categories
-      </h1>
+      </Typography>
 
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}

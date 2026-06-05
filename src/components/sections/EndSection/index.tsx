@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BackgroundVideo } from "@/components/ui/background-video";
 import { Phone, Calendar, Mail, FileText } from "lucide-react";
+import { Typography } from "@/components/ui/typography";
 
 export default function EndSection() {
   const YOUTUBE_VIDEO_ID = "OvsjaGesjU8";
@@ -31,12 +32,12 @@ export default function EndSection() {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <p className="text-sm md:text-base font-medium uppercase tracking-[0.2em] mb-6 text-gray-300">
+          <Typography variant="p" className="text-sm md:text-base font-medium uppercase tracking-[0.2em] mb-6 text-gray-300">
             Delivering complicated craftsmanship is our expertise
-          </p>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold mb-12 leading-tight tracking-tight drop-shadow-2xl">
+          </Typography>
+          <Typography variant="h1" className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold mb-12 leading-tight tracking-tight drop-shadow-2xl border-none">
             Designs for the <br /> <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">Bold of Heart</span>
-          </h1>
+          </Typography>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl mx-auto mt-8">
             {buttons.map((btn, idx) => (

@@ -10,6 +10,7 @@ import {
   Factory,
 } from "lucide-react"; // lucide-react icons
 import { Card, CardContent } from "@/components/ui/card";
+import { Typography } from "@/components/ui/typography";
 
 // Define a type for your service items
 interface ServiceItem {
@@ -33,9 +34,9 @@ export default function AllUnderOneRoof() {
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800">
+        <Typography variant="h2" className="text-3xl md:text-4xl font-bold mb-12 text-gray-800 border-none">
           All Under One Roof
-        </h2>
+        </Typography>
 
         {/* Services Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12">
@@ -46,9 +47,9 @@ export default function AllUnderOneRoof() {
             >
               <CardContent className="flex flex-col items-center justify-center p-6 h-full">
                 {service.icon}
-                <p className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
+                <Typography variant="p" className="mt-4 text-base font-semibold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
                   {service.label}
-                </p>
+                </Typography>
               </CardContent>
             </Card>
           ))}

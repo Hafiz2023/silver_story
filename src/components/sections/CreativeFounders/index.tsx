@@ -1,6 +1,7 @@
 // app/ui/CreativeFounders.tsx
 import Image from "next/image";
 import React from "react";
+import { Typography } from "@/components/ui/typography";
 
 // Define a type for founder data
 interface Founder {
@@ -20,9 +21,9 @@ export default function CreativeFounders() {
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24">
       <div className="container mx-auto px-4 text-center">
         {/* Main Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-gray-800 tracking-tight">
+        <Typography variant="h2" className="text-3xl md:text-4xl font-bold mb-16 text-gray-800 tracking-tight border-none">
           Our Creative Founders
-        </h2>
+        </Typography>
 
         {/* Founders Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 justify-items-center">
@@ -44,9 +45,9 @@ export default function CreativeFounders() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               {/* Founder Name */}
-              <p className="mt-4 text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">
+              <Typography variant="p" className="mt-4 text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300">
                 {founder.name}
-              </p>
+              </Typography>
             </div>
           ))}
         </div>

@@ -8,6 +8,7 @@ import { Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { Typography } from "@/components/ui/typography";
 
 // Define a type for your video data
 interface VideoItem {
@@ -60,9 +61,9 @@ export default function VideoGallery() {
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
+        <Typography variant="h2" className="text-3xl font-bold mb-8 text-center text-gray-800 border-none">
           Our Latest Projects
-        </h2>
+        </Typography>
 
         <Swiper
           modules={[Navigation]}
@@ -112,7 +113,7 @@ export default function VideoGallery() {
 
                 {/* Title Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-                  <p className="text-lg font-semibold truncate">{video.title}</p>
+                  <Typography variant="p" className="text-lg font-semibold truncate mt-0">{video.title}</Typography>
                 </div>
               </div>
             </SwiperSlide>

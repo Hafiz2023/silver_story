@@ -3,6 +3,7 @@
 
 import React from "react";
 import CountUp from "react-countup"; // Import react-countup
+import { Typography } from "@/components/ui/typography";
 
 interface StatItem {
   id: string;
@@ -25,7 +26,7 @@ export default function StatsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center"> {/* Responsive grid */}
           {stats.map((stat) => (
             <div key={stat.id} className="flex flex-col items-center p-4">
-              <h2 className="text-5xl md:text-6xl font-extrabold text-gray-800 mb-2">
+              <Typography variant="h2" className="text-5xl md:text-6xl font-extrabold text-gray-800 mb-2 border-none">
                 <CountUp
                   end={stat.value}
                   duration={2.5} // Animation duration in seconds
@@ -34,10 +35,10 @@ export default function StatsSection() {
                   enableScrollSpy={true} // Starts counting when component enters viewport
                   scrollSpyOnce={true} // Counts only once
                 />
-              </h2>
-              <p className="text-lg text-gray-600 leading-tight">
+              </Typography>
+              <Typography variant="p" className="text-lg text-gray-600 leading-tight mt-0">
                 {stat.label}
-              </p>
+              </Typography>
             </div>
           ))}
         </div>

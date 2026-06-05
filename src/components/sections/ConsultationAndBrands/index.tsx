@@ -5,6 +5,8 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Typography } from "@/components/ui/typography";
+import { Button } from "@/components/ui/button";
 
 // Define a type for brand logos
 interface BrandLogo {
@@ -64,15 +66,15 @@ export default function ConsultationAndBrands() {
 
       <div className="container mx-auto px-4 text-center">
         {/* Consultation Section */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
+        <Typography variant="h1" className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
           Book your free Consultation
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
+        </Typography>
+        <Typography variant="p" className="text-lg text-gray-600 mb-8 mt-0">
           It&apos;s time to live your dreams!
-        </p>
-        <button className="inline-flex items-center justify-center px-6 py-3 border border-gray-400 rounded-full text-gray-700 hover:bg-gray-100 transition-colors duration-300">
+        </Typography>
+        <Button variant="outline" className="inline-flex items-center justify-center px-6 py-6 border border-gray-400 rounded-full text-gray-700 hover:bg-gray-100 transition-colors duration-300">
           Book Now
-        </button>
+        </Button>
 
         {/* Separator */}
         <div className="my-24 md:my-32 relative">
@@ -82,9 +84,9 @@ export default function ConsultationAndBrands() {
         </div>
 
         {/* Brands Section */}
-        <h2 className="text-2xl md:text-3xl font-semibold mb-12 text-gray-800">
+        <Typography variant="h2" className="text-2xl md:text-3xl font-semibold mb-12 text-gray-800 border-none">
           Our Preferred Global Brands
-        </h2>
+        </Typography>
 
         {/* Carousel Wrapper */}
         <div className="relative w-full overflow-hidden">

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { BackgroundVideo } from "@/components/ui/background-video";
 import { Button } from "@/components/ui/button";
+import { Typography } from "@/components/ui/typography";
 
 export default function ContactPage() {
   const YOUTUBE_VIDEO_ID = "wsQBs_QRexA"; // Replace with your YouTube video ID
@@ -30,30 +31,38 @@ export default function ContactPage() {
               height={80}
               className="mb-2"
             />
-            <h2 className="text-white text-xl md:text-2xl font-medium tracking-wide">
+            <Typography as="h2" variant="h2" className="text-white text-xl md:text-2xl font-medium tracking-wide border-none">
               Silver Storey
-            </h2>
+            </Typography>
           </motion.div>
 
           {/* Main Heading */}
-          <motion.h1
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg leading-snug"
           >
-            DELIVERING COMPLICATED CRAFTSMANSHIP IS OUR EXPERTISE
-          </motion.h1>
+            <Typography
+              variant="h1"
+              className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg leading-snug"
+            >
+              DELIVERING COMPLICATED CRAFTSMANSHIP IS OUR EXPERTISE
+            </Typography>
+          </motion.div>
 
           {/* Subtitle */}
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="text-white text-lg md:text-2xl mt-4"
           >
-            Designs for the <span className="font-bold">Bold of Heart</span>
-          </motion.p>
+            <Typography
+              variant="p"
+              className="text-white text-lg md:text-2xl mt-4"
+            >
+              Designs for the <span className="font-bold">Bold of Heart</span>
+            </Typography>
+          </motion.div>
 
           {/* Buttons with Hover Effects */}
           <motion.div
